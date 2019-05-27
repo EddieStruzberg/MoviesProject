@@ -1,0 +1,26 @@
+﻿<h1>{{message}}</h1>
+<br /><br />
+Search: <input type="text" placeholder="Search.." ng-model="searchText">
+<br /><br />
+Order By:  <select ng-model="sortCol">
+    <option value="Title">Name</option>
+    <option value="-Views">Views</option>
+    <option value="-Seasons">Season</option>
+</select>
+<br /><br />
+
+<div class="row" ng-repeat="movie in movies | filter:searchText| orderBy:sortCol">
+    <br />
+    <a href="MovieDetails/{{movie.ID}}">
+        <div class="imgcol" style="background-color:#aaa;">
+            <img src="{{movie.Image}}" alt="Movie Image" style="height:100%; width:100%;" />
+        </div>
+        <div class="detailscol" style="background-color:#bbb;">
+            <h2>{{movie.Title}}</h2>
+            <p> Season {{movie.Seasons}} </p>
+            <p>  Views {{movie.Views}} </p>
+        </div>
+    </a>
+    <br />
+</div>
+

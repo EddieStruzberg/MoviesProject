@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MoviesProject">
+<head>
+    <base href="/" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/script.js"></script>
+    <link href="Templates/Styles.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="w3-top">
+        <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+            <ul>
+                <li class="w3-right w3-padding-16"><a href="AllMovies">All Movies</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="mainContent">
+        <ng-view></ng-view>
+    </div>
+
+</body>
+</html>
